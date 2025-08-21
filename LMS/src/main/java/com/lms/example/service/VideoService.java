@@ -1,7 +1,7 @@
-package com.video.example.service;
+package com.lms.example.service;
 
-import com.video.example.entity.Video;
-import com.video.example.repositry.VideoRepository;
+import com.lms.example.entity.Video;
+import com.lms.example.repositry.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -34,3 +34,4 @@ public class VideoService {
         return videoRepository.save(video);
     }
 }
+
