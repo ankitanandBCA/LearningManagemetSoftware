@@ -29,6 +29,7 @@ public class VideoController {
     VideoRepository videoRepository;
 
     @PostMapping("/upload")
+    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
     public String uploadVideo(@RequestParam("description") String description,
                               @RequestParam("file") MultipartFile file) {
         try {
@@ -68,4 +69,5 @@ public class VideoController {
 
 
 }
+
 
