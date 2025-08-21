@@ -19,6 +19,7 @@ import java.nio.file.Files;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
 @RequestMapping("/videos")
 public class VideoController {
 
@@ -29,7 +30,7 @@ public class VideoController {
     VideoRepository videoRepository;
 
     @PostMapping("/upload")
-    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
+   
     public String uploadVideo(@RequestParam("description") String description,
                               @RequestParam("file") MultipartFile file) {
         try {
@@ -43,14 +44,14 @@ public class VideoController {
 
 
     @GetMapping("/all")
-    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
+   
     public List<Video> getAllVideos() {
         return videoRepository.findAll();
     }
 
 
     @GetMapping("/play/{id}")
-    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
+   
     public void streamVideo(@PathVariable Long id, HttpServletResponse response) throws IOException {
         Video video = videoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Video not found"));
@@ -69,5 +70,6 @@ public class VideoController {
 
 
 }
+
 
 
