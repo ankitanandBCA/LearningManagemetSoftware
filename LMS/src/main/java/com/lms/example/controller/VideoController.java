@@ -1,8 +1,8 @@
 package com.video.example.controller;
 
-import com.video.example.entity.Video;
-import com.video.example.repositry.VideoRepository;
-import com.video.example.service.VideoService;
+import com.lms.example.entity.Video;
+import com.lms.example.repositry.VideoRepository;
+import com.lms.example.service.VideoService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,6 +70,7 @@ public class VideoController {
 
 
 }
+
 
 
 
