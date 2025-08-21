@@ -42,14 +42,14 @@ public class VideoController {
 
 
     @GetMapping("/all")
-    @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
     public List<Video> getAllVideos() {
         return videoRepository.findAll();
     }
 
 
     @GetMapping("/play/{id}")
-    @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @CrossOrigin(origins = "https://lmssoftware-7c720.web.app")
     public void streamVideo(@PathVariable Long id, HttpServletResponse response) throws IOException {
         Video video = videoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Video not found"));
@@ -68,3 +68,4 @@ public class VideoController {
 
 
 }
+
