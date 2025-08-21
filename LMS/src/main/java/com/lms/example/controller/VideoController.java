@@ -1,4 +1,4 @@
-package com.video.example.controller;
+package com.lms.example.controller;
 
 import com.lms.example.entity.Video;
 import com.lms.example.repositry.VideoRepository;
@@ -70,6 +70,7 @@ public class VideoController {
 
 
 }
+
 
 
 
